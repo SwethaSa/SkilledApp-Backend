@@ -1,5 +1,4 @@
 import express from "express";
-import { client } from "../index.js";
 const router = express.Router();
 import {
   createUsers,
@@ -8,7 +7,7 @@ import {
 } from "../services/users.service.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import { auth } from "../middleware/auth.js";
 dotenv.config();
 
